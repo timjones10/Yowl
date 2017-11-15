@@ -8,4 +8,16 @@
   <%= @restaurant.description %>
 </p>
 
+<h2>Add a review:</h2>
+<%= form_with(model: [ @restaurant, @restaurant.reviews.build ],
+local: true) do |form| %>
+  <p>
+    <%= form.label :review %><br>
+    <%= form.text_area :review %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+  <% end %>
+
 <%= link_to 'View Restaurants', restaurants_path%>
