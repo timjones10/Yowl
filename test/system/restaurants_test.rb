@@ -55,4 +55,20 @@ class RestaurantsTest < ApplicationSystemTestCase
     assert_no_text "Thai"
   end
 
+  test 'showing error messages for invalid entry- without name' do
+    visit restaurants_path
+    click_on 'New Restaurant'
+    fill_in 'restaurant[description]', with: 'very nice'
+    click_on 'Save'
+    assert_text "Name can't be blank"
+  end
+
+  test 'showing error messages for invalid entry- without description' do
+    visit restaurants_path
+    click_on 'New Restaurant'
+    fill_in 'restaurant[name]', with: 'Japanese'
+    click_on 'Save'
+    assert_text "Description can't be blank"
+  end
+
 end
