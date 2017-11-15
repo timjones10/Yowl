@@ -40,6 +40,9 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'pry'
+  gem 'database_cleaner'
+  gem 'minitest-around'
+  gem "minitest-rails-capybara"
 end
 
 group :development do
