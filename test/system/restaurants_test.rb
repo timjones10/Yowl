@@ -38,5 +38,22 @@ class RestaurantsTest < ApplicationSystemTestCase
 
     assert_no_text 'Creating a Restaurant'
   end
-  
+
+  test 'editing a restaurant listing' do
+    visit restaurants_path
+
+    click_on 'New Restaurant'
+
+    fill_in 'restaurant[name]', with: 'Creating a Restaurant'
+    fill_in 'restaurant[description]', with: 'Tell me about your food!'
+
+    click_on 'Save Restaurant'
+
+    click_on 'View Restaurants'
+
+    click_on 'Edit Listing'
+
+    assert_text "Name"
+  end
+
 end
