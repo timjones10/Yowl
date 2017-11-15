@@ -15,7 +15,7 @@ class RestaurantsTest < ApplicationSystemTestCase
     fill_in 'restaurant[name]', with: 'Creating a Restaurant'
     fill_in 'restaurant[description]', with: 'Tell me about your food!'
 
-    click_on 'Save Restaurant'
+    click_on 'Save'
 
     assert_text 'Creating a Restaurant'
   end
@@ -28,7 +28,7 @@ class RestaurantsTest < ApplicationSystemTestCase
     fill_in 'restaurant[name]', with: 'Creating a Restaurant'
     fill_in 'restaurant[description]', with: 'Tell me about your food!'
 
-    click_on 'Save Restaurant'
+    click_on 'Save'
 
     click_on 'View Restaurants'
 
@@ -47,7 +47,7 @@ class RestaurantsTest < ApplicationSystemTestCase
     fill_in 'restaurant[name]', with: 'Creating a Restaurant'
     fill_in 'restaurant[description]', with: 'Tell me about your food!'
 
-    click_on 'Save Restaurant'
+    click_on 'Save'
 
     click_on 'View Restaurants'
 
