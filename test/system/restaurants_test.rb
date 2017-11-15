@@ -7,7 +7,7 @@ class RestaurantsTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Restaurants'
   end
 
-  test 'creating a restaurant listing' do
+  def new_restaurant
     visit restaurants_path
 
     click_on 'New Restaurant'
@@ -16,19 +16,17 @@ class RestaurantsTest < ApplicationSystemTestCase
     fill_in 'restaurant[description]', with: 'Tell me about your food!'
 
     click_on 'Save'
+  end
+
+  test 'creating a restaurant listing' do
+
+    new_restaurant
 
     assert_text 'Creating a Restaurant'
   end
 
   test 'deleting a restaurant listing' do
-    visit restaurants_path
-
-    click_on 'New Restaurant'
-
-    fill_in 'restaurant[name]', with: 'Creating a Restaurant'
-    fill_in 'restaurant[description]', with: 'Tell me about your food!'
-
-    click_on 'Save'
+    new_restaurant
 
     click_on 'View Restaurants'
 
@@ -40,14 +38,7 @@ class RestaurantsTest < ApplicationSystemTestCase
   end
 
   test 'editing a restaurant listing' do
-    visit restaurants_path
-
-    click_on 'New Restaurant'
-
-    fill_in 'restaurant[name]', with: 'Creating a Restaurant'
-    fill_in 'restaurant[description]', with: 'Tell me about your food!'
-
-    click_on 'Save'
+    new_restaurant
 
     click_on 'View Restaurants'
 
