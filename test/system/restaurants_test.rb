@@ -8,39 +8,30 @@ class RestaurantsTest < ApplicationSystemTestCase
   end
 
   def new_restaurant
-    visit restaurants_path
-
+    click_on 'View Restaurants'
     click_on 'New Restaurant'
-
     fill_in 'restaurant[name]', with: 'Creating a Restaurant'
     fill_in 'restaurant[description]', with: 'Tell me about your food!'
-
     click_on 'Save'
   end
 
-  def sign_up_log_in
-    visit welome_index_path
+  def sign_up
+    visit '/'
     click_on "Sign up"
-    fill_in 'restaurant[email]', with: 'Creating a Restaurant'
-    fill_in 'restaurant[description]', with: 'Tell me about your food!'
-  end
-
-    click_on 'New Restaurant'
-
-    fill_in 'restaurant[name]', with: 'Creating a Restaurant'
-    fill_in 'restaurant[description]', with: 'Tell me about your food!'
-
-    click_on 'Save'
+    fill_in 'user[email]', with: 'a@b.com'
+    fill_in 'user[password]', with: '123456'
+    fill_in 'user[password_confirmation]', with: '123456'
+    click_on "Sign up"
   end
 
   test 'creating a restaurant listing' do
-
+    sign_up
     new_restaurant
-
     assert_text 'Creating a Restaurant'
   end
 
   test 'deleting a restaurant listing' do
+    sign_up
     new_restaurant
 
     click_on 'View Restaurants'
@@ -53,16 +44,15 @@ class RestaurantsTest < ApplicationSystemTestCase
   end
 
   test 'editing a restaurant listing' do
+    sign_up
     new_restaurant
-
     click_on 'View Restaurants'
-
     click_on 'Edit Listing'
-
     assert_text "Name"
   end
 
   test 'validating the description field in the new restaurant' do
+    sign_up
     visit restaurants_path
     click_on 'New Restaurant'
     fill_in 'restaurant[name]', with: 'Thai'
@@ -71,6 +61,7 @@ class RestaurantsTest < ApplicationSystemTestCase
   end
 
   test 'showing error messages for invalid entry- without name' do
+    sign_up
     visit restaurants_path
     click_on 'New Restaurant'
     fill_in 'restaurant[description]', with: 'very nice'
@@ -79,6 +70,7 @@ class RestaurantsTest < ApplicationSystemTestCase
   end
 
   test 'showing error messages for invalid entry- without description' do
+    sign_up
     visit restaurants_path
     click_on 'New Restaurant'
     fill_in 'restaurant[name]', with: 'Japanese'
