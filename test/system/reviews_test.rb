@@ -16,10 +16,16 @@ class ReviewsTest < ApplicationSystemTestCase
 
     new_restaurant
 
+    # binding.pry
+
+    fill_in 'review[rating]', with: "3"
     fill_in 'review[comment]', with: "wasn't bad"
 
     click_on "Post Review"
 
+    assert_text "3"
+
     assert_text "wasn't bad"
   end
+
 end

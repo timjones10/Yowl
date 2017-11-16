@@ -1,11 +1,14 @@
-
 <%= form_with(model: [ @restaurant, @restaurant.reviews.build ]) do |form| %>
 
-  <p>
-    <%= form.label :comment %><br>
-    <%= form.text_area :comment %>
-  </p>
-  <p>
-    <%= form.submit "Post Review" %>
-  </p>
+<p>
+  <%= form.label :rating %><br>
+  <%= form.number_field :rating %>
+</p>
+<p>
+  <%= form.label :comment %><br>
+  <%= form.text_area :comment %>
+</p>
+<p>
+  <%= form.submit "Post Review" %>
+</p>
 <% end %>
