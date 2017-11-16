@@ -36,15 +36,17 @@
 <h1 class="title">Restaurants in your area</h1>
 
   <div class="col-sm-12 text-left">
-    <% @restaurants.each do |restaurant| %>
-    <article class="restaurant_container">
-      <h2><%= restaurant.name %></h2>
-      <h3><%= restaurant.description %></h3>
-      <p><%= link_to 'Show full details', restaurant_path(restaurant)%></p>
-      <br>
-      <br>
-    </article>
-    <% end %>
+    <div>
+      <% @restaurants.each do |restaurant| %>
+      <article class="restaurant_container">
+        <h2><%= restaurant.name %></h2>
+        <h3><%= restaurant.description %></h3>
+        <p><%= link_to 'Show full details', restaurant_path(restaurant)%></p>
+        <br>
+        <br>
+      </article>
+      <% end %>
+    </div>
   </div>
 
   <div class="col-sm-12 text-center">
