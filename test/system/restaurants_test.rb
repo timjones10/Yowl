@@ -18,6 +18,21 @@ class RestaurantsTest < ApplicationSystemTestCase
     click_on 'Save'
   end
 
+  def sign_up_log_in
+    visit welome_index_path
+    click_on "Sign up"
+    fill_in 'restaurant[email]', with: 'Creating a Restaurant'
+    fill_in 'restaurant[description]', with: 'Tell me about your food!'
+  end
+
+    click_on 'New Restaurant'
+
+    fill_in 'restaurant[name]', with: 'Creating a Restaurant'
+    fill_in 'restaurant[description]', with: 'Tell me about your food!'
+
+    click_on 'Save'
+  end
+
   test 'creating a restaurant listing' do
 
     new_restaurant

@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = current_user.restaurants.build
+    # @restaurant.user_id = current_user.id
   end
 
   def edit
