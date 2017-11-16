@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
  end
 
   def new
-    @restaurant = Restaurant.new
+    @restaurant = current_user.restaurants.build
   end
 
   def edit
@@ -17,13 +17,13 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant = current_user.restaurants.build(restaurant_params)
 
     if @restaurant.save
       redirect_to @restaurant
     else
       render 'new'
-    end 
+    end
   end
 
   def update
