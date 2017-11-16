@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div>
-      <img id="cat_yowl" src="https://www.petful.com/wp-content/uploads/2015/03/2973212926_93c8840816_b.jpg">
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="restaurants">View Restaurants <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Review Restaurants</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">??????</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">??????</a>
-        </li>
-      </ul>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img id="cat_yowl" src="https://www.petful.com/wp-content/uploads/2015/03/2973212926_93c8840816_b.jpg" class="img-responsive" alt="Image">
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="restaurants">View Restaurants</a></li>
+          <li><a href="#">???????</a></li>
+          <li><a href="#">???????</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/sessions/new"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -58,7 +63,7 @@
         <img src="http://i2.wp.com/www.foodrepublic.com/wp-content/uploads/2015/02/Pla-Rad-Prik_0.jpg?fit=4058%2C2620" alt="Image">
         <div class="carousel-caption">
           <h1>WELCOME TO YOWL</h1>
-          <p>There is only a 3% chance you will get food posioning/p>
+          <p>There is only a 3% chance you will get food posioning</p>
         </div>
       </div>
     </div>
@@ -74,6 +79,31 @@
     </a>
   </div>
 
+  <div class="container text-center">
+    <h3>Start planning your dinner<br></h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="well">
+         <h1>Sign Up to Yowl</h1>
+         <form class="signUpSignIn" action='???????' method='get'>
+           <input type="submit" value="Create a new Account">
+         </form>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <img id="welcome_cheesecake" src="http://s3.amazonaws.com/gmi-digital-library/d4b45de8-1878-4deb-ae0e-a69807c42f2b.jpg" class="img-responsive" style="width:100%" alt="Image">
+        <div class="centered"><h2>What not have dessert too?</h2></div>
+      </div>
+      <div class="col-sm-4">
+        <div class="well">
+          <h1>Log In to Yowl</h1>
+          <form class="signUpSignIn" action='??????' method='get'>
+            <input type="submit" value="Sign In">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div><br>
 
-  </body>
+</body>
 </html>

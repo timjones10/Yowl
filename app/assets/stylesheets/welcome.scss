@@ -6,13 +6,33 @@
   max-height:100px;
 }
 
-// #myCarousel {
-//   max-height: 300px;
-// }
-
 .carousel-inner img {
   width: 100%;
   margin: auto;
   min-height:200px;
   max-height: 600px;
+}
+
+#welcome_cheesecake {
+  opacity: 0.3;
+}
+
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: x-large;
+}
+
+.nav-link {
+  font-size: small;
+}
+
+h1 {
+  font-size: xx-large;
+}
+p {
+  font-size: medium;
 }
