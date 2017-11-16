@@ -18,7 +18,7 @@ class ReviewsTest < ApplicationSystemTestCase
 
     fill_in 'review[comment]', with: "wasn't bad"
 
-    click_on "Create Review"
+    click_on "Post Review"
 
     assert_text "wasn't bad"
   end
