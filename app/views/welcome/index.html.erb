@@ -19,10 +19,20 @@
           <a class="nav-link" href="#">Review Restaurants</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">??????</a>
+          <a class="nav-link" >
+          <% if user_signed_in? %>
+        <li>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        </li>
+      <% else %>
+        <li>
+        <%= link_to('Login', new_user_session_path)  %>
+        </li>
+      <% end %>
+      </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">??????</a>
+          <a class="nav-link" href="users/sign_up">Sign up</a>
         </li>
       </ul>
     </div>
