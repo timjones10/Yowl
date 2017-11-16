@@ -1,11 +1,49 @@
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-<p>
-  <strong>Description:</strong>
-  <%= @restaurant.description %>
-</p>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img id="cat_yowl" src="https://www.petful.com/wp-content/uploads/2015/03/2973212926_93c8840816_b.jpg" class="img-responsive" alt="Image">
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="../restaurants">View Restaurants</a></li>
+          <li><a href="#">???????</a></li>
+          <li><a href="#">???????</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/sessions/new"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<%= link_to 'View Restaurants', restaurants_path%>
+  <div>
+    <h1>
+      <strong>Name:</strong>
+      <%= @restaurant.name %>
+    </h1>
+
+    <h2>
+      <strong>Description:</strong>
+      <%= @restaurant.description %>
+    </h2>
+  </div>
+</body>
+
+</htm>
