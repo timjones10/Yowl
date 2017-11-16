@@ -4,7 +4,7 @@ require 'database_cleaner'
 require "minitest/rails/capybara"
 
 DatabaseCleaner.strategy = :transaction
-# 
+#
 # class Minitest::Spec
 #   before :each do
 #     DatabaseCleaner.start
@@ -27,4 +27,15 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+end
+
+def new_restaurant
+  visit restaurants_path
+
+  click_on 'New Restaurant'
+
+  fill_in 'restaurant[name]', with: 'Creating a Restaurant'
+  fill_in 'restaurant[description]', with: 'Tell me about your food!'
+
+  click_on 'Save'
 end

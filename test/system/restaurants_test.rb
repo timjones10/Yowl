@@ -1,5 +1,6 @@
 require 'application_system_test_case'
 require 'database_cleaner'
+require "test_helper"
 
 class RestaurantsTest < ApplicationSystemTestCase
   test 'viewing the index' do
@@ -7,16 +8,16 @@ class RestaurantsTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Restaurants'
   end
 
-  def new_restaurant
-    visit restaurants_path
-
-    click_on 'New Restaurant'
-
-    fill_in 'restaurant[name]', with: 'Creating a Restaurant'
-    fill_in 'restaurant[description]', with: 'Tell me about your food!'
-
-    click_on 'Save'
-  end
+  # def new_restaurant
+  #   visit restaurants_path
+  #
+  #   click_on 'New Restaurant'
+  #
+  #   fill_in 'restaurant[name]', with: 'Creating a Restaurant'
+  #   fill_in 'restaurant[description]', with: 'Tell me about your food!'
+  #
+  #   click_on 'Save'
+  # end
 
   test 'creating a restaurant listing' do
 
