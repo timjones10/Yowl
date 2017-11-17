@@ -1,14 +1,26 @@
-<%= form_with(model: [ @restaurant, @restaurant.reviews.build ]) do |form| %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-<p>
-  <%= form.label :rating %><br>
-  <%= form.number_field :rating %>
-</p>
-<p>
-  <%= form.label :comment %><br>
-  <%= form.text_area :comment %>
-</p>
-<p>
-  <%= form.submit "Post Review" %>
-</p>
-<% end %>
+  <body>
+
+    <script src="../assets/javascripts/bootstrap-rating-input.min.js" type="text/javascript"></script>
+
+    <%= form_with(model: [ @restaurant, @restaurant.reviews.build ]) do |form| %>
+    <p>
+      <%= form.label :rating %><br>
+      <strong>(from 1 - 5)</strong><br>
+      <input value="<%=:rating%>" type="number" name="review[rating]" id="some_id" class="rating"/>
+    </p>
+    <p>
+      <%= form.label :comment %><br>
+      <%= form.text_area :comment %>
+    </p>
+    <p>
+      <%= form.submit "Post Review" %>
+    </p>
+  <% end %>
+</body>
+</html>

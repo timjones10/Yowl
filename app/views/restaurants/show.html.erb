@@ -1,18 +1,29 @@
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-<p>
-  <strong>Description:</strong>
-  <%= @restaurant.description %>
-</p>
+  <body>
 
-<h2>Past Reviews:</h2>
-<%= render @restaurant.reviews %>
+    <script src="../assets/javascripts/bootstrap-rating-input.min.js" type="text/javascript"></script>
 
-<h2>Add a review:</h2>
-<%= render 'reviews/form' %>
+    <p>
+      <strong>Name:</strong>
+      <%= @restaurant.name %>
+    </p>
 
+    <p>
+      <strong>Description:</strong>
+      <%= @restaurant.description %>
+    </p>
 
-<%= link_to 'View Restaurants', restaurants_path%>
+    <h2>Past Reviews:</h2>
+    <%= render @restaurant.reviews %>
+
+    <h2>Add a review:</h2>
+    <%= render 'reviews/form' %>
+
+    <%= link_to 'View Restaurants', restaurants_path%>
+  </body>
+</html>

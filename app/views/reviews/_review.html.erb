@@ -1,10 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-  <p>
+  <body>
+    <script src="../assets/javascripts/bootstrap-rating-input.min.js" type="text/javascript"></script>
     <p>
-      <strong>Rating:</strong>
-      <%= review.rating %>
+      <p>Rating:
+        <input type="number" name="your_awesome_parameter" id="rating-readonly" class="rating" data-clearable="remove" value="<%= review.rating %>" data-readonly="data-readonly"/></p>
     </p>
 
     <strong>Review:</strong>
     <%= review.comment %>
   </p>
+</body>
+</html>

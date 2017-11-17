@@ -21,6 +21,8 @@ class ReviewsTest < ApplicationSystemTestCase
     fill_in 'review[rating]', with: "3"
     fill_in 'review[comment]', with: "wasn't bad"
 
+    binding.pry
+
     click_on "Post Review"
 
     assert_text "3"
