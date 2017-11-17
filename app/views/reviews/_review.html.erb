@@ -14,5 +14,10 @@
     <strong>Review:</strong>
     <%= review.comment %>
   </p>
+
+  <p>
+    <%= link_to 'Delete Review', [review.restaurant, review],
+    method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
 </body>
 </html>
